@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif
+}
+
+/* ----------- Navbar ----------- */
+nav {
+    justify-content: space-between;
+    padding: 16px 5%;
+    background: dimgray;
+    height: 100px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.nav-links {
+    display: flex; /* Make nav-links a flex container */
+    align-items: center; /* Center nav items vertically */
+}
+
+.nav-links a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 12px 16px;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    padding: 4px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-elem a:hover, .nav-dropdown:hover {
+    background-color: gray;
+    transition: all 0.2s ease 0s;
+}
+
+.active a {
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    display: flex; /* Use flex to align logo properly */
+    align-items: center; /* Center logo vertically */
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dd-btn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    transition: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: inherit;
+    color: white;
+}
+
+.nav-dd-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position dropdown below the button */
+    width: 100%;
+    left: 0; /* Align dropdown to the left */
+}
+
+.nav-dropdown:hover .nav-dd-content {
+  display: block;
+}
+
+/* Dropdown links */
+.nav-dd-content a {
+    display: block; /* Make links block elements */
+    padding: 10px; /* Padding for dropdown links */
+    color: black; /* Default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-dd-content a:hover {
+    background-color: #ddd; /* Background color on hover for dropdown links */
+    color: black; /* Text color on hover */
+}
